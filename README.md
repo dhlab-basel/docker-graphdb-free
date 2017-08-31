@@ -3,7 +3,7 @@
 
 This repository contains a Dockerfile for building an image with the latest version of **GraphDB-SE 8** supported by [Knora](https://github.com/dhlab-basel/Knora).
 
-GraphDB-Free is the Free Edition of the triplestore from Ontotext (http://ontotext.com). GraphDB-Free must be licensed separately by the user, by registering with Ontotext, i.e. fill out this form for downloading the free edition.
+GraphDB-Free is the Free Edition of the triplestore from Ontotext (http://ontotext.com). GraphDB-Free must be licensed separately by the user, by registering with Ontotext, i.e. fill out the form for downloading the free edition.
 
 ## Image tags
 -------------
