@@ -22,7 +22,10 @@ RUN \
   curl -sS -o /tmp/graphdb.zip -L http://go.pardot.com/e/45622/7a-graphdb-free-8-2-0-dist-zip/4rzsm6/1106070369 && \
   unzip /tmp/graphdb.zip -d /tmp && \
   mv /tmp/graphdb-free-8.2.0 /graphdb && \
-  rm /tmp/graphdb.zip
+  git clone -b develop --single-branch --depth=1 https://github.com/dhlab-basel/Knora.git /knora && \
+  cp /knora/webapi/scripts/KnoraRules.pie /graphdb && \
+  rm /tmp/graphdb.zip && \
+  rm -rf /knora
 
 # Set GraphDB Max and Min Heap size
 ENV GDB_HEAP_SIZE="4g"
