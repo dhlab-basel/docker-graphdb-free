@@ -17,15 +17,12 @@ RUN \
 # Set environment variables
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
-# Install GraphDB-Free and the needed 'KnoraRules.pie'
+# Install GraphDB-Free and clean up
 RUN \
   curl -sS -o /tmp/graphdb.zip -L http://go.pardot.com/e/45622/7a-graphdb-free-8-2-0-dist-zip/4rzsm6/1106070369 && \
   unzip /tmp/graphdb.zip -d /tmp && \
   mv /tmp/graphdb-free-8.2.0 /graphdb && \
-  git clone -b develop --single-branch --depth=1 https://github.com/dhlab-basel/Knora.git /knora && \
-  cp /knora/webapi/scripts/KnoraRules.pie /graphdb && \
-  rm /tmp/graphdb.zip && \
-  rm -rf /knora
+  rm /tmp/graphdb.zip
 
 # Set GraphDB Max and Min Heap size
 ENV GDB_HEAP_SIZE="4g"
